@@ -7,7 +7,8 @@ public class PipeSpawner : MonoBehaviour
     public float repeatRate = 1;
     private float timer = 0;
     public float height = 5;
-    public GameObject prefabPipe;
+    public GameObject[] pipes;
+    private int pipeIndex;
 
     // Update is called once per frame
     void Update()
@@ -23,7 +24,8 @@ public class PipeSpawner : MonoBehaviour
 
     private void SpawnPipe()
     {
-        GameObject newPipe = Instantiate(prefabPipe);
+        pipeIndex = Random.Range(0, pipes.Length);
+        GameObject newPipe = Instantiate(pipes[pipeIndex]);
         newPipe.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), 0);
         Destroy(newPipe, 10f);
     }

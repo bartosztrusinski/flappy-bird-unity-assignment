@@ -994,7 +994,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   repeatRate: 2
   height: 3
-  prefabPipe: {fileID: 8367743689942355194, guid: 4ed5e8ab50120ec46adcc5bab4485e52, type: 3}
+  pipes:
+  - {fileID: 8367743689942355194, guid: 95fd12597dbe47a439ec12d6cd4ae906, type: 3}
+  - {fileID: 8367743689942355194, guid: 4ed5e8ab50120ec46adcc5bab4485e52, type: 3}
 --- !u!4 &1521276765
 Transform:
   m_ObjectHideFlags: 0
