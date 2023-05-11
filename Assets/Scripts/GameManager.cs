@@ -27,8 +27,14 @@ public class GameManager : Singleton<GameManager>
     }
     public void OnGameOver()
     {
+        if (points > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", points);
+            PlayerPrefs.Save();
+        }
         ShowLoseUI();
         Time.timeScale = 0;
+      
     }
 
     public void UpdateScore()
