@@ -35,4 +35,13 @@ public class PlayerController : MonoBehaviour
         hitAudioSource.Play();
         GameManager.Instance.OnGameOver();
     }
+
+    private void xd(Collider2D col)
+    {
+        if(col.gameObject.name == "coin")
+        {
+            GameManager.Instance.UpdateScore();
+            Destroy(col.gameObject);
+        }
+    }
 }

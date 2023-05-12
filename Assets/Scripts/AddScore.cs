@@ -9,5 +9,4 @@ public class AddScore : MonoBehaviour
     {
         GameManager.Instance.UpdateScore();
     }
-    
 }
